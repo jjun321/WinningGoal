@@ -1,39 +1,28 @@
 package Client;
 
-import java.awt.CardLayout;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Image;
+import Client.LobbyClient;
+
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
-import javax.swing.border.EmptyBorder;
-
-import Client.LobbyClient;
-
 public class ClientMain extends JFrame {
+
+    public static final int PORT = 3000;
+
 	InetAddress inetAddress = null;
-	
+
 	private JTextField t_UserName;
     private JTextField t_IpAddress;
     private JTextField t_PortNumber;
     private JPanel mainPanel = new JPanel();
-    
+
     public ClientMain() {
         setTitle("Winning GOAL");
         setSize(520, 500);
@@ -43,7 +32,7 @@ public class ClientMain extends JFrame {
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-    
+
     private void buildGUI() {
 
         mainPanel.setBackground(new Color(180, 222, 255));
@@ -64,7 +53,7 @@ public class ClientMain extends JFrame {
 
         l_Subtitle.setSize(400, 60);
         l_Subtitle.setLocation(125, 70);
-        
+
         mainPanel.add(l_Title);
         mainPanel.add(l_Subtitle);
 
@@ -117,7 +106,7 @@ public class ClientMain extends JFrame {
 
         t_PortNumber = new JTextField();
         t_PortNumber.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
-        t_PortNumber.setText("12345");
+        t_PortNumber.setText("3000");
         t_PortNumber.setHorizontalAlignment(SwingConstants.CENTER);
         t_PortNumber.setColumns(10);
         t_PortNumber.setBounds(254, 292, 116, 33);
