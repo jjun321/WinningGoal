@@ -36,7 +36,6 @@ public class ClientMain extends JFrame {
     
     public ClientMain() {
         setTitle("Winning GOAL");
-
         setSize(520, 500);
         setLocationRelativeTo(null); // 화면 중앙에 프레임 띄우기
         buildGUI();
@@ -57,11 +56,14 @@ public class ClientMain extends JFrame {
         // JLabel의 크기를 텍스트에 맞게 조절
         l_Title.setSize(400, 60);
         //l_Title.setSize(l_Title.getPreferredSize());
-        l_Title.setLocation(85, 30); // 제목 위치 조정
+        l_Title.setLocation(105, 30); // 제목 위치 조정
 
         JLabel l_Subtitle = new JLabel("친구와 함께하는 승부차기");
+
+        l_Subtitle.setFont(new Font("Malgun Gothic", Font.BOLD, 20));
+
         l_Subtitle.setSize(400, 60);
-        l_Subtitle.setLocation(85, 50);
+        l_Subtitle.setLocation(125, 70);
         
         mainPanel.add(l_Title);
         mainPanel.add(l_Subtitle);
@@ -76,7 +78,7 @@ public class ClientMain extends JFrame {
         mainPanel.add(l_ball);
 
         JLabel l_UserName = new JLabel("사용자 이름");
-        l_UserName.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 16));
+        l_UserName.setFont(new Font("Malgun Gothic", Font.PLAIN, 16));
 
         l_UserName.setBounds(123, 139, 102, 33);
         mainPanel.add(l_UserName);
@@ -89,7 +91,7 @@ public class ClientMain extends JFrame {
         t_UserName.setColumns(10);
 
         JLabel lblIpAddress = new JLabel("IP Address");
-        lblIpAddress.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 16));
+        lblIpAddress.setFont(new Font("Malgun Gothic", Font.PLAIN, 16));
         lblIpAddress.setBounds(123, 213, 102, 33);
         mainPanel.add(lblIpAddress);
 
@@ -109,7 +111,7 @@ public class ClientMain extends JFrame {
         }
 
         JLabel lblPortNumber = new JLabel("Port Number");
-        lblPortNumber.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 16));
+        lblPortNumber.setFont(new Font("Malgun Gothic", Font.PLAIN, 16));
         lblPortNumber.setBounds(123, 292, 102, 33);
         mainPanel.add(lblPortNumber);
 
@@ -123,7 +125,9 @@ public class ClientMain extends JFrame {
         mainPanel.add(t_PortNumber);
 
         JButton startButton = new JButton("입장하기");
-        startButton.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
+        startButton.setFont(new Font("Malgun Gothic", Font.BOLD, 20));
+
+        startButton.setBackground(new Color(255, 255, 255)); // 버튼 배경색
 
         startButton.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(Color.lightGray, 3), // 회색 외곽선
